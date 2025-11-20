@@ -85,16 +85,16 @@ class Contact extends Component {
               </div>
             </div>
           </Fade>
-          <Fade bottom duration={1000} distance="40px">
-            <div className="address-heading-div">
+          {/* <Fade bottom duration={1000} distance="40px"> */}
+          {/* <div className="address-heading-div">
               <div className="contact-heading-img-div">
                 {/* <img
 											src={require(`../../assets/images/${addressSection["avatar_image_path"]}`)}
 											alt=""
 										/> */}
-                <AddressImg theme={theme} />
-              </div>
-              <div className="address-heading-text-div">
+          {/* <AddressImg theme={theme} /> */}
+          {/* </div> */}
+          {/* <div className="address-heading-text-div">
                 <h1
                   className="address-heading-text"
                   style={{ color: theme.text }}
@@ -126,10 +126,10 @@ class Contact extends Component {
                     href={addressSection.location_map_link}
                     theme={theme}
                   />
-                </div>
-              </div>
-            </div>
-          </Fade>
+                </div> */}
+          {/* </div> */}
+          {/* </div> */} */}
+          {/* </Fade> */}
         </div>
         <Footer theme={this.props.theme} onToggle={this.props.onToggle} />
         <TopButton theme={this.props.theme} />
