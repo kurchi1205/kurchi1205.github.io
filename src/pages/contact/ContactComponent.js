@@ -77,11 +77,10 @@ class Contact extends Component {
                 </div>
               </div>
               <div className="blog-heading-img-div">
-                {/* <img
-											src={require(`../../assets/images/${blogSection["avatar_image_path"]}`)}
-											alt=""
-										/> */}
-                <BlogsImg theme={theme} />
+                <img
+                  src={require(`../../assets/images/blogging_38kl.svg`)}
+                  alt=""
+                />
               </div>
             </div>
           </Fade>
@@ -128,7 +127,7 @@ class Contact extends Component {
                   />
                 </div> */}
           {/* </div> */}
-          {/* </div> */} */}
+          {/* </div> */}
           {/* </Fade> */}
         </div>
         <Footer theme={this.props.theme} onToggle={this.props.onToggle} />

@@ -80,7 +80,7 @@
   font-family: "Google Sans Medium";
   line-height: 1.1;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 .address-heading-text {
@@ -102,7 +102,7 @@
 .blog-header-detail-text {
   font-size: 20px;
   line-height: 30px;
-  margin-top: 0px;
+  margin-top: 40px;
   margin-left: 20px;
   margin-right: 20px;
   font-family: "Google Sans Medium";
@@ -112,6 +112,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-bottom: 100px;
 }
 
 .blogsite-btn-div {
@@ -131,6 +132,7 @@
   .contact-heading-text {
     font-size: 50px;
     margin-top: 60px;
+    margin-bottom: 40px;
   }
 
   .blog-heading-text {
