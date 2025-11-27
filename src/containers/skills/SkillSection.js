@@ -42,9 +42,9 @@ class SkillSection extends Component {
                     {skill.title}
                   </h1>
                 </Fade>
-                <Fade right duration={1500}>
+                {/* <Fade right duration={1500}>
                   <SoftwareSkill logos={skill.softwareSkills} />
-                </Fade>
+                </Fade> */}
                 <Fade right duration={2000}>
                   <div>
                     {skill.skills.map((skillSentence, i) => {
