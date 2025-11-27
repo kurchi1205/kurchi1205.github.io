@@ -9,13 +9,22 @@ import CloudInfraImg from "./CloudInfraImg";
 import DesignImg from "./DesignImg";
 
 function GetSkillSvg(props) {
-  if (props.fileName === "DataScienceImg")
-    return <DataScienceImg theme={props.theme} />;
-  else if (props.fileName === "FullStackImg")
-    return <FullStackImg theme={props.theme} />;
-  else if (props.fileName === "CloudInfraImg")
-    return <CloudInfraImg theme={props.theme} />;
-  return <DesignImg theme={props.theme} />;
+  const svgPath = {
+    DataScienceImg: require("../../assets/images/artificial_intel.svg"),
+    CloudInfraImg: require("../../assets/images/cloud.svg"),
+  }[props.fileName];
+
+  if (svgPath) {
+    return (
+      <img
+        src={svgPath}
+        alt="SVG Image"
+        style={{ width: "70%", height: "auto" }}
+      />
+    );
+  }
+
+  return null;
 }
 
 class SkillSection extends Component {
