@@ -20,9 +20,9 @@ const seo = {
 const greeting = {
   title: "Prerana Chakraborty",
   subTitle:
-    "An AI/ML engineer with a passion for building scalable systems, exploring generative models, and turning complex ideas into working solutions. Outside of tech, you'll usually find me singing, it's my reset button and my favorite way to unwind.",
+    "Hey! I’m an AI/ML engineer who likes building scalable stuff, tinkering with generative models, and turning big ideas into real projects. Outside of tech, I’m usually singing — it keeps me sane.",
   resumeLink:
-    "https://drive.google.com/file/d/1bXRknv_h-XI_3CQ3SGPteGODtvEb7YvI/view?usp=sharing",
+    "https://docs.google.com/document/d/1oOaI4lIgsf-lTDmaCy1dTIhUb0f5WoLXNVOxWfOBd_M/edit?usp=sharing",
   githubProfile: "https://github.com/kurchi1205",
 };
 
