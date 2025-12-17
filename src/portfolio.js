@@ -586,7 +586,8 @@ const contactPageData = {
     title: "Blogs",
     subtitle:
       "I like to document some of my experiences in professional career journey as well as some technical knowledge sharing.",
-    link: "https://blogs.ashutoshhathidara.com/",
+    link:
+      "https://www.linkedin.com/in/prerana-c-44b9931a3/details/publications/",
     avatar_image_path: "blogs_image.svg",
   },
   addressSection: {
