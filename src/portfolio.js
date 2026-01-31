@@ -22,7 +22,7 @@ const greeting = {
   subTitle:
     "Hey! I’m an AI/ML engineer who likes building scalable stuff, tinkering with generative models, and turning big ideas into real projects. Outside of tech, I’m usually singing — it keeps me sane.",
   resumeLink:
-    "https://docs.google.com/document/d/1oOaI4lIgsf-lTDmaCy1dTIhUb0f5WoLXNVOxWfOBd_M/edit?usp=sharing",
+    "https://docs.google.com/document/d/1EUOGG71mZOa9SOF6wmeYLRg60VCVvyLdB5rbB1pzzDc/edit?usp=sharing",
   githubProfile: "https://github.com/kurchi1205",
 };
 

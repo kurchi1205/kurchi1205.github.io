@@ -1,5 +1,6 @@
 {
   "data": [
+    
     {
       "id": "R_kgDOJWL0-g",
       "name": "Serving System for DiT based model",
@@ -22,6 +23,37 @@
         }
       ]
     },
+    {
+      "id": "ROJWL0-g",
+      "name": "Langchain Monitor",
+      "createdAt": "2024-10-17T14:47:34Z",
+      "url": "https://github.com/kurchi1205/fast-dit-serving.git",
+      "description": "RAG-based search over LangChain issues, leveraging LLMs to derive technical and business insights.",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "Python",
+          "iconifyClass": "logos-python"
+        },
+        {
+          "name": "Shell",
+          "iconifyClass": "simple-icons:shell"
+        },
+        {
+          "name": "Jupyter Notebook",
+          "iconifyClass": "logos-jupyter"
+        },
+        {
+          "name": "Milvus",
+          "iconifyClass": "logos-jupyter"
+        },
+        {
+          "name": "langchain",
+          "iconifyClass": "logos-jupyter"
+        }
+      ]
+    },
+    
     {
       "id": "R_kgDOG_vYHA",
       "name": "Recolorization of Images",
