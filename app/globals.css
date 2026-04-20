@@ -1,0 +1,99 @@
+:root {
+  --font-display: "Avenir Next", "Segoe UI", sans-serif;
+  --font-body: "Aptos", "Segoe UI", sans-serif;
+  --font-mono: "SFMono-Regular", "SF Mono", "Consolas", monospace;
+
+  --linen: #f2eae0;
+  --mist: #b4d3d9;
+  --wisteria: #bda6ce;
+  --iris: #9b8ec7;
+
+  --bg: #f2eae0;
+  --bg2: #eae0d4;
+  --bg3: #e0d4c4;
+  --card: #faf6f2;
+  --txt: #2a1f18;
+  --txt2: #6b5a50;
+  --txt3: #a89488;
+  --border: rgba(42, 31, 24, 0.1);
+  --accent: #9b8ec7;
+  --accent2: #bda6ce;
+  --accent3: #b4d3d9;
+}
+
+[data-theme="dark"] {
+  --bg: #1c1720;
+  --bg2: #241e2a;
+  --bg3: #2c2534;
+  --card: #201b28;
+  --txt: #f0eaf8;
+  --txt2: #a090b8;
+  --txt3: #584e68;
+  --border: rgba(240, 234, 248, 0.09);
+  --accent: #bda6ce;
+  --accent2: #9b8ec7;
+  --accent3: #b4d3d9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(140deg, var(--bg), var(--bg2), var(--bg3));
+  color: var(--txt);
+  font-family: var(--font-body), sans-serif;
+}
+
+main {
+  width: min(1120px, 100% - 2rem);
+  margin: 0 auto;
+  padding: 3rem 0 4rem;
+}
+
+section {
+  background: color-mix(in srgb, var(--card) 86%, white 14%);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+h1,
+h2 {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display), sans-serif;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--accent);
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin: 0;
+  color: var(--txt2);
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  main {
+    width: min(1120px, 100% - 1rem);
+    padding-top: 1.25rem;
+  }
+
+  section {
+    padding: 1.25rem;
+  }
+}
