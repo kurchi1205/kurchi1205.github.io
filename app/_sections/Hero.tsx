@@ -1,11 +1,25 @@
+import { heroContent } from "@/config/site";
+
 export default function Hero() {
   return (
-    <section id="hero">
-      <h1>Prerana Chakraborty</h1>
-      <p>
-        Phase 1 scaffold is live. Next steps migrate content, components, and
-        integrations from the legacy CRA app.
-      </p>
+    <section id="hero" className="hero-section">
+      <div className="hero-orbit" aria-hidden="true" />
+
+      <div className="hero-copy">
+        <div className="hero-kicker-row">
+          <span className="section-tag">{heroContent.role}</span>
+        </div>
+        <h1>{heroContent.name}</h1>
+        <p className="hero-location-line">Based in {heroContent.location}</p>
+        <p className="hero-intro">{heroContent.intro}</p>
+        <div className="hero-chip-row">
+          {heroContent.focusAreas.map((area) => (
+            <span key={area} className="pill">
+              {area}
+            </span>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

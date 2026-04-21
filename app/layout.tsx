@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
+import { siteMetadata } from "@/config/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Prerana Chakraborty | Portfolio",
-  description:
-    "AI/ML engineer portfolio built with Next.js, TypeScript, and a pastel design system.",
+  title: siteMetadata.title,
+  description: siteMetadata.description,
   openGraph: {
-    title: "Prerana Chakraborty | Portfolio",
-    description:
-      "AI/ML engineer portfolio built with Next.js, TypeScript, and a pastel design system.",
+    title: siteMetadata.ogTitle,
+    description: siteMetadata.description,
     type: "website",
   },
 };
@@ -20,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="light">
-      <body>{children}</body>
+      <body>
+        {children}
+      </body>
     </html>
   );
 }

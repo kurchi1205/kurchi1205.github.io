@@ -1,21 +1,10 @@
-import About from "./_sections/About";
-import Contact from "./_sections/Contact";
-import Experience from "./_sections/Experience";
-import Hero from "./_sections/Hero";
-import Projects from "./_sections/Projects";
+import ContentLayout from "./_components/ContentLayout";
 import Skills from "./_sections/Skills";
-import Writing from "./_sections/Writing";
 
 export default function Home() {
   return (
-    <main>
-      <Hero />
-      <About />
+    <ContentLayout>
       <Skills />
-      <Experience />
-      <Projects />
-      <Writing />
-      <Contact />
-    </main>
+    </ContentLayout>
   );
 }
