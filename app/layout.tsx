@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { siteMetadata } from "@/config/site";
+import SectionNav from "./_components/SectionNav";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -20,6 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="light">
       <body>
+        <header className="site-header">
+          <SectionNav />
+        </header>
         {children}
       </body>
     </html>

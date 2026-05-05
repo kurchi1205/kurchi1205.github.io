@@ -1,30 +1,46 @@
 import { experienceContent } from "@/config/experience";
 
 export default function Experience() {
+  const items = experienceContent.sections.flatMap((s) => s.items);
+
   return (
     <section id="experience">
-      <h2>{experienceContent.title}</h2>
-      <p>{experienceContent.description}</p>
-      {experienceContent.sections.map((section) => (
-        <article key={section.title}>
-          <h3>{section.title}</h3>
-          {section.items.map((item) => (
-            <div key={`${item.company}-${item.role}-${item.duration}`}>
-              <h4>{item.role}</h4>
-              <p>
-                <a href={item.companyHref} target="_blank" rel="noreferrer">
-                  {item.company}
-                </a>
-                {" · "}
-                {item.location}
-                {" · "}
-                {item.duration}
-              </p>
-              <p>{item.description}</p>
+      <div className="section-heading">
+        <span className="section-tag">Work History</span>
+        <h2>Experience</h2>
+      </div>
+      <div className="exp-list">
+        {items.map((item) => (
+          <a
+            key={`${item.company}-${item.role}`}
+            href={item.companyHref}
+            className="exp-card"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className="exp-logo-wrap">
+              <img
+                src={item.logo}
+                alt={item.company}
+                width="40"
+                height="40"
+                loading="lazy"
+              />
             </div>
-          ))}
-        </article>
-      ))}
+            <div className="exp-body">
+              <div className="exp-header">
+                <span className="exp-role">{item.role}</span>
+                <span className="exp-arrow">↗</span>
+              </div>
+              <span className="exp-company">{item.company}</span>
+              <div className="exp-tags">
+                <span className="exp-tag">{item.location}</span>
+                <span className="exp-tag exp-tag--time">{item.duration}</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
     </section>
   );
 }

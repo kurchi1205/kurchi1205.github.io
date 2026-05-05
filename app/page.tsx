@@ -1,10 +1,11 @@
-import ContentLayout from "./_components/ContentLayout";
-import Skills from "./_sections/Skills";
+import Hero from "./_sections/Hero";
 
 export default function Home() {
   return (
-    <ContentLayout>
-      <Skills />
-    </ContentLayout>
+    <main className="home-shell">
+      <div className="home-hero-wrap">
+        <Hero />
+      </div>
+    </main>
   );
 }

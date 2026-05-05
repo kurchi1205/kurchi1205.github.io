@@ -15,6 +15,7 @@ export type HeroContent = {
   location: string;
   intro: string;
   focusAreas: string[];
+  photo?: string;
 };
 
 export type AboutContent = {
@@ -64,6 +65,7 @@ export const heroContent: HeroContent = {
     "Production ML infrastructure",
     "Research engineering",
   ],
+  photo: "/profile_pic.png",
 };
 
 export const aboutContent: AboutContent = {
