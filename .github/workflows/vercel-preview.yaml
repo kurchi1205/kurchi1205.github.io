@@ -26,4 +26,4 @@ jobs:
           DEPLOY_URL=$(vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }})
           echo "deploy_url=$DEPLOY_URL" >> $GITHUB_OUTPUT
       - name: Assign custom domain
-        run: vercel alias set ${{ steps.deploy.outputs.deploy_url }} prerana.dev --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel alias set ${{ steps.deploy.outputs.deploy_url }} prerana-profile.vercel.app --token=${{ secrets.VERCEL_TOKEN }}
