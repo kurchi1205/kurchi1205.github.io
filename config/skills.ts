@@ -58,7 +58,6 @@ export const skillCategories: SkillCategory[] = [
       { name: "Stable Diffusion", logo: "https://api.iconify.design/lucide/sparkles.svg" },
       { name: "HuggingFace", logo: "https://api.iconify.design/simple-icons/huggingface.svg" },
       { name: "Milvus", logo: "https://api.iconify.design/simple-icons/milvus.svg" },
-      { name: "XGBoost", logo: "https://api.iconify.design/simple-icons/xgboost.svg" },
       { name: "DVC", logo: "https://api.iconify.design/simple-icons/dvc.svg" },
     ],
   },
