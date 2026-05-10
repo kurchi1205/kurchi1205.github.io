@@ -1012,69 +1012,216 @@ h4 {
   border: 2px solid rgba(10, 8, 22, 0.95);
 }
 
-@media (max-width: 640px) {
-  main {
-    width: min(1120px, 100% - 1rem);
-    padding-top: 2rem;
-  }
-
-  section {
-    padding: 1.25rem;
-  }
-
-  .hero-section {
-    min-height: auto;
-    padding: 1.5rem;
-  }
-
-  .content-top-nav {
-    justify-content: flex-start;
-  }
-
-  .page-sidebar {
-    margin-top: 0;
-  }
-}
-
-@media (max-width: 820px) {
+/* ─── Tablet (≤ 1200px): collapse page shell, keep hero two-col ─── */
+@media (max-width: 1200px) {
   .page-shell,
-  .experience-contact-row,
-  .hero-section,
-  .hero-layout,
   .about-layout,
-  .skills-grid,
   .about-grid {
     grid-template-columns: 1fr;
   }
 
+  .page-sidebar {
+    display: none;
+  }
+
+  /* sidebar hero gets more room now that it's full-width */
+  .page-sidebar .hero-layout {
+    grid-template-columns: minmax(0, 1.45fr) minmax(200px, 0.85fr);
+  }
+
+  .page-sidebar .hero-photo-wrap {
+    width: clamp(8rem, 15vw, 10rem);
+  }
+
+  .page-sidebar .hero-chip-row {
+    flex-wrap: wrap;
+  }
+}
+
+/* ─── Mobile (≤ 640px): collapse hero, nav, grids ─── */
+@media (max-width: 640px) {
+  /* Layout */
+  main {
+    width: calc(100% - 1rem);
+    padding: 1.5rem 0 3rem;
+  }
+
+  section {
+    padding: 1.25rem;
+    border-radius: 1.15rem;
+  }
+
+  /* Header */
+  .site-header {
+    padding: 0.6rem 0.75rem 0;
+  }
+
+  /* Nav — scrollable single row instead of wrapping */
+  .content-top-nav {
+    gap: 0.45rem;
+    padding: 0.5rem 0.65rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .content-top-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .content-top-nav a {
+    padding: 0.48rem 0.65rem;
+    font-size: 0.82rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* Hero */
+  .hero-section {
+    min-height: auto;
+    padding: 1.25rem;
+  }
+
+  .hero-orbit {
+    display: none;
+  }
+
+  /* Collapse hero to single column, photo panel floats to top */
+  .hero-layout,
+  .page-sidebar .hero-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-portrait-panel,
+  .page-sidebar .hero-portrait-panel {
+    order: -1;
+    justify-items: center;
+    padding: 1.25rem 1rem;
+    gap: 0.65rem;
+  }
+
+  .hero-photo-wrap,
+  .page-sidebar .hero-photo-wrap {
+    width: clamp(6.5rem, 30vw, 9rem);
+  }
+
+  .hero-photo-caption,
+  .page-sidebar .hero-photo-caption {
+    text-align: center;
+    max-width: 26ch;
+    font-size: 0.82rem;
+  }
+
+  .hero-social-row {
+    justify-content: center;
+  }
+
+  .hero-copy {
+    gap: 0.7rem;
+  }
+
+  .hero-intro {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .hero-chip-row,
+  .page-sidebar .hero-chip-row {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .pill,
+  .page-sidebar .pill {
+    padding: 0.45rem 0.7rem;
+    font-size: 0.85rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  /* Home */
+  .home-shell {
+    padding: 3vh 0.75rem 2.5rem;
+  }
+
+  /* Skills logo grid: 3 → 2 columns */
   .skill-logo-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  /* Contact: 3 → 2 columns */
   .contact-links {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .page-sidebar {
-    position: static;
+  /* Experience */
+  .exp-card {
+    gap: 0.75rem;
+    padding: 1rem;
   }
 
-  .hero-portrait-panel {
-    justify-items: start;
+  .exp-logo-wrap {
+    width: 40px;
+    height: 40px;
   }
 
-  .hero-photo-caption {
-    max-width: none;
-    text-align: left;
+  .exp-logo-wrap img {
+    width: 28px;
+    height: 28px;
   }
 
-  .hero-chip-row {
-    justify-content: flex-start;
+  .exp-role {
+    font-size: 0.95rem;
+  }
+
+  /* Education */
+  .education-card-top {
+    grid-template-columns: 52px minmax(0, 1fr);
+  }
+
+  .education-logo-wrap {
+    width: 52px;
+    height: 52px;
+  }
+
+  .education-logo {
+    width: 38px;
+    height: 38px;
   }
 }
 
-@media (max-width: 560px) {
+/* ─── Small phone (≤ 400px): tighten further ─── */
+@media (max-width: 400px) {
+  section {
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  .hero-section {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: clamp(1.6rem, 8vw, 2.2rem);
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  /* Skills + contact: collapse to 1 column */
+  .skill-logo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-links {
+    grid-template-columns: 1fr;
+  }
+
   .home-shell {
-    padding: 4vh 1rem 3rem;
+    padding: 2vh 0.5rem 2rem;
   }
 }
